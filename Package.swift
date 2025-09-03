@@ -18,17 +18,13 @@ let package = Package(
         ),
     ],
     // Dependências de outros pacotes.
-    dependencies: [
-        .package(url: "https://github.com/kean/Nuke.git", from: "9.0.0")
-    ],
+    dependencies: [],
     // Os targets (alvos) do seu pacote, que podem ser módulos ou suites de teste.
     targets: [
         // O target principal da sua biblioteca de networking.
         .target(
             name: "CoreNetwork",
-            dependencies: [
-                "Nuke"
-            ]
+            dependencies: []
         ),
         // O target de teste para a sua biblioteca.
         .testTarget(

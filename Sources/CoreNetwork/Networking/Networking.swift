@@ -18,12 +18,8 @@ public final class Networking: NetworkingProtocol {
                             diskPath: "CoreNetwork.Networking.sharedImageCache")
         }()
     
-    public init(session: URLSession?) {
-        if let session {
-            self.session = session
-        } else {
-            self.session = .shared
-        }
+    public init(session: URLSession = .shared) {
+        self.session = session
     }
 
     public init(configuration: URLSessionConfiguration? = nil) {
