@@ -1,4 +1,4 @@
-// swift-tools-version: 5.7
+// swift-tools-version: 6.1
 // A 'swift-tools-version' declara a versão mínima do Swift necessária para compilar este pacote.
 
 import PackageDescription
@@ -19,7 +19,7 @@ let package = Package(
     ],
     // Dependências de outros pacotes.
     dependencies: [
-        .package(url: "https://github.com/Alamofire/Alamofire.git", from: "5.9.1")
+        .package(url: "https://github.com/kean/Nuke.git", from: "9.0.0")
     ],
     // Os targets (alvos) do seu pacote, que podem ser módulos ou suites de teste.
     targets: [
@@ -27,7 +27,7 @@ let package = Package(
         .target(
             name: "CoreNetwork",
             dependencies: [
-                "Alamofire"
+                "Nuke"
             ]
         ),
         // O target de teste para a sua biblioteca.

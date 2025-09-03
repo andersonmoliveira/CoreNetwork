@@ -1,14 +1,15 @@
 {
+  "originHash" : "1b2c228030915b23a3cf82200a5338af8fac8d32b4af10db0d3da0dd5465021e",
   "pins" : [
     {
-      "identity" : "alamofire",
+      "identity" : "nuke",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/Alamofire/Alamofire.git",
+      "location" : "https://github.com/kean/Nuke.git",
       "state" : {
-        "revision" : "f455c2975872ccd2d9c81594c658af65716e9b9a",
-        "version" : "5.9.1"
+        "revision" : "7f73ceaeacd5df75a7994cd82e165ad9ff1815db",
+        "version" : "9.6.1"
       }
     }
   ],
-  "version" : 2
+  "version" : 3
 }
