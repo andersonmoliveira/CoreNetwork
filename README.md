@@ -81,11 +81,10 @@ mockNetwork.mockResponse(for: "/movies/popular", response: [Movie(title: "Filme 
 ```
 
 🛠️ Roadmap
- Suporte a autenticação OAuth2
 
- Cache de respostas
-
- Monitoramento de performance de requisições
+* [ ] Monitoramento de performance de requisições
+* [ ] Suporte a autenticação OAuth2
+* [ ] Cache de respostas
 
 📄 Licença
 Este projeto está sob a licença MIT. Consulte o arquivo LICENSE para mais detalhes.
