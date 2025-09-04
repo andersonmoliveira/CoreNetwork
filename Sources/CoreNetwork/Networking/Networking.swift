@@ -35,27 +35,19 @@ public final class Networking: NetworkingProtocol {
     }
     
     public func request<T: Decodable>(_ request: Request) async throws -> T {
-        let urlRquest = try urlRequest(from: request)
+        let data: Data
+        do {
+            data = try await self.request(request)
+        } catch let error {
+            throw error
+        }
+        
+        guard !data.isEmpty else { throw APIError.noData }
 
-        return try await withCheckedThrowingContinuation { continuation in
-            session.dataTask(with: urlRquest) { (data, response, error) in
-                if let error {
-                    continuation.resume(throwing: APIError.network(error))
-                    return
-                }
-                
-                guard let data, !data.isEmpty else {
-                    continuation.resume(throwing: APIError.noData)
-                    return
-                }
-
-                do {
-                    let decoded = try JSONDecoder().decode(T.self, from: data)
-                    continuation.resume(returning: decoded)
-                } catch {
-                    continuation.resume(throwing: APIError.decoding)
-                }
-            }.resume()
+        do {
+            return try JSONDecoder().decode(T.self, from: data)
+        } catch {
+            throw APIError.decoding
         }
     }
 
