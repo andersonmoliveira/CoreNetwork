@@ -1,5 +1,5 @@
 //
-//  ImageDataDownloader.swift
+//  HTTPMethod.swift
 //  CoreNetwork
 //
 //  Created by Anderson Oliveira on 02/09/25.

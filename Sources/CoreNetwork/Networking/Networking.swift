@@ -18,7 +18,7 @@ public final class Networking: NetworkingProtocol {
                             diskPath: "CoreNetwork.Networking.sharedImageCache")
         }()
     
-    public init(session: URLSession = .shared) {
+    public init(session: URLSession) {
         self.session = session
     }
 
